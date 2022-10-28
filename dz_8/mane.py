@@ -9,7 +9,7 @@ def mane_function():
 
 def test_function():
     c = b + s
-    print(c)
+    print(c.upper())
 
 
 mane_function()
