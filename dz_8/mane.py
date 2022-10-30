@@ -8,7 +8,5 @@ def mane_function():
     print(s.swapcase())
 
 
-
-
 mane_function()
 
