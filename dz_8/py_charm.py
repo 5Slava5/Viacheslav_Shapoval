@@ -7,6 +7,7 @@ def mane_function(x, y):
     print(f'Результат x / y = {x / y} ')
     print(f'Результат x // y = {x // y} ')
     print(f'Результат x % y = {x % y} ')
+    print(f'Результат x ** y = {x ** y} ')
 
 
 
