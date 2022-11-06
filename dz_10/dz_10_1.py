@@ -6,18 +6,15 @@ list_of_months = {1: 'January', 2: 'February', 3: 'March', 4: 'April',
                   10: 'October', 11: 'November', 12: 'December'
                   }
 
-inp = int(input("Please input number of a month: - "))
+
+def month_name(m):
+    """A month number must be an integer"""
+    return list_of_months[m]
 
 
-def monthname(m):
-    try:
-        return list_of_months[m]
-    except ValueError as er1:
-        print(f'it must be an integer: {er1}', file=sys.stderr)
-    except KeyError as er2:
-        print(f'it must be a number between 1 and 12: {er2}', file=sys.stderr)
-    except TypeError as er3:
-        print(f'it must be a number more than 0: {er3}', file=sys.stderr)
-
-
-print(monthname(inp))
+try:
+    print(month_name(int(input("Enter a number of a month (1-12): - "))))
+except ValueError as er1:
+    print(f'it must be an integer, not a word: {er1}', file=sys.stderr)
+except KeyError as er2:
+    print(f'it must be a number between 1 and 12: {er2}', file=sys.stderr)
